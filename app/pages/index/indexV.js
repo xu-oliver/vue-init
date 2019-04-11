@@ -13,10 +13,11 @@ var ComponentA = {
 		}
 	},
 	//  v-on:click="getMoment()"
-	template: `<div>a<component-c v-on:give-item="getTimeOut" v-bind:data-id="this._props.dataId"></component-c></div>`,
+	template: `<div>a<component-c v-on:give-item="getTimeOut" v-bind:data-id="this._props.dataId"></component-c></div>`,  
 	methods: {
 		getMoment:function(){
 			console.log(this.id)
+			console.log(this._props.dataId)
 			console.log(this._props.dataId)
 		},
 		getTimeOut: function(data){
