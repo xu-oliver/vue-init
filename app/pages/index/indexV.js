@@ -18,6 +18,7 @@ var ComponentA = {
 		getMoment:function(){
 			console.log(this.id)
 			console.log(this.id)
+			console.log(this.id)
 			console.log(this._props.dataId)
 			console.log(this._props.dataId)
 		},
