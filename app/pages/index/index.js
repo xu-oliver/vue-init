@@ -2,6 +2,8 @@ import Vue from 'vue/dist/vue.js';
 import css from './index.scss';
 import moment from 'moment';
 import ComponentA from './indexV'
+import ComponentB from './pak'
+import ComponentC from './three'
 
 import {getRedPacket, authorization, getAward, shareRedPacket, queryMemberInfo} from '../../action/server';
 import Utils from '../../utils/utils';
@@ -35,6 +37,9 @@ const index = new Vue({
 		},
 		consoleF: function(){
 			console.log('go to consoleF axios!')
+		},
+		getTimeOut: function(data){
+			console.log(data)
 		}
 	},
 	watch: {
@@ -43,6 +48,8 @@ const index = new Vue({
 		}
 	},
 	components: {
-		'component-a': ComponentA
+		'component-a': ComponentA,
+		'component-b': ComponentB,
+		'component-c': ComponentC
 	}
 });

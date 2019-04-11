@@ -8,7 +8,11 @@
 </head>
 <body>
     <div class="index">
-        <component-a></component-a>
+        <!-- v-bind:item="JSON.stringify(item)" -->
+        <component-b v-on:go-click="getTimeOut"></component-b> 
+        <component-a v-for="item in post" v-bind:data-id="item.id" v-bind:data-title="item.title" v-bind:data-times="item.times" v-bind:data-end="item.end">
+            <!-- <component-c v-bind:data-id="item.id"></component-c> -->
+        </component-a>
     </div>
 </body>
 </html>
